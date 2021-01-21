@@ -18,7 +18,7 @@ public class MarioServiceImpl implements MarioService {
         int upperBound = 11;
         int number = random.nextInt(upperBound);
         byte[] bytes;
-        var imgFile = new ClassPathResource("img/" + number + ".jpg");
+        ClassPathResource imgFile = new ClassPathResource("img/" + number + ".jpg");
         try {
             bytes = StreamUtils.copyToByteArray(imgFile.getInputStream());
         } catch (IOException e) {
